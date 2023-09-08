@@ -1,0 +1,33 @@
+:root{
+    --lightest:#D2BBF2;
+    --light-purple:#7E5EF2;
+    --dark:#182E59;
+    --highlight:#5005F2;
+}
+
+*{
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    align-self: center;
+}
+
+/*------Pop-up----*/
+#form{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    max-width: 70%;
+    background-color: var(--lightest);
+    padding: 2%;
+
+}
+

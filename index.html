@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>To do list</title>
+</head>
+<body>
+    <header>To Do</header>
+    <button>Add new task</button>
+    <form id="form">
+        <label for="task">What would be the task?</label>
+        <input type="text" id="task" required>
+        <fieldset>
+            <legend>Priority level</legend>
+            <label for="priority"><input id="high-priority" value="high-priority" type="radio"  name="priority level">High</label>
+            <label for="priority"><input id="mid-priority" value="mid-priority" type="radio"  name="priority level">Medium</label>
+            <label for="priority"><input id="low-priority" value="low-priority" type="radio" name="priority level">Low</label>
+        </fieldset>
+        <label for="date">What is the deadline?</label>
+        <input type="date" id="date">
+        <label for="note">Note</label>
+        <textarea id="note" rows="3" cols="30" placeholder="Personal notes"></textarea>
+        <button type="submit">Add</button>
+    </form> 
+</body>
+<script src="main.js"></script>
+</html>
