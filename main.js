@@ -1,7 +1,7 @@
 /*------------DOM HANDLE-------------- */
 const form = document.querySelector('.modal');
 const addTask = document.getElementById('add-task');
-
+let priorityField;
 
 /*------------------------------------ */
 let tasks=[];
@@ -25,14 +25,33 @@ addTask.addEventListener("click",()=>{
     form.style.display='flex';
 })
     
+// -------------------Event listeners/functions-----------------------
+
 form.addEventListener("submit", (e) => {
     e.preventDefault();
+    taskField = document.getElementById('task');
+    dateField = document.getElementById('date');
+    noteField = document.getElementById('note');
+    priorityField = document.querySelector('.priority:checked');
+
     let newTask={
-        'task':document.getElementById('task').value,
-        'priority':document.getElementsByClassName('radio').value,
-        'deadline':document.getElementById('date').value,
-        'note': document.getElementById('note').value
+        'task':taskField.value,
+        'priority':priorityField.value,
+        'deadline':dateField.value,
+        'note': noteField.value
     }
+
     tasks.push(newTask);
-    form.style.display='none';
+    closeModal();
     });
+
+
+function closeModal(){
+    form.style.display='none';
+    if(priorityField){
+        taskField.value='';
+        priorityField.checked=false;
+        dateField.value='';
+        noteField.value='';
+    }
+}

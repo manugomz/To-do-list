@@ -14,14 +14,14 @@
     <button id="add-task">Add new task</button>
     <div class="modal">
         <form id="form">
-            <button class="close">x</button>
+            <button type="button" class="close" onclick="closeModal()">x</button>
             <label for="task" class="title">What would be the task?</label>
             <input type="text" id="task" required>
             <fieldset class="title">
                 <legend>Priority level</legend>
-                <label for="priority"><input id="high-priority" value="high-priority" type="radio"  name="priority level">High</label>
-                <label for="priority"><input id="mid-priority" value="mid-priority" type="radio"  name="priority level">Medium</label>
-                <label for="priority"><input id="low-priority" value="low-priority" type="radio" name="priority level">Low</label>
+                <label for="low"><input id="low" value="low" type="radio" class="priority" name="priority level" checked=false >Low</label>
+                <label for="mid"><input id="mid" value="mid" type="radio" class="priority" name="priority level">Medium</label>
+                <label for="high"><input id="high" value="high" type="radio" class="priority" name="priority level">High</label>
             </fieldset>
             <label for="date" class="title">What is the deadline?</label>
             <input type="date" id="date">
